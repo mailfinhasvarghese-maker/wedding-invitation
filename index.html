@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="msapplication-navbutton-color" content="#100c0b">
-<title>Finhas & Anjitha — April 2026</title>
+<title>Finhas &amp; Anjitha &#8212; April 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Great+Vibes&family=Passions+Conflict&family=EB+Garamond:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -17,8 +17,6 @@
 html { scroll-behavior:smooth; scroll-snap-type:y mandatory; }
 body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var(--ivory); overflow-x:hidden; overflow-y:scroll; }
 ::-webkit-scrollbar{width:3px;} ::-webkit-scrollbar-track{background:var(--dark);} ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
-
-/* ═══ INTRO ═══ */
 #intro{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;transition:opacity 1.8s cubic-bezier(0.4,0,0.2,1);background:radial-gradient(ellipse at 45% 40%,#231412 0%,#080504 100%);}
 #intro .intro-bg{display:none;}
 #intro.hide{opacity:0;pointer-events:none;}
@@ -29,8 +27,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .ic4{width:450px;height:180px;background:rgba(201,169,110,0.04);bottom:5%;left:8%;animation-duration:24s;animation-delay:-14s;}
 @keyframes iDrift{0%,100%{transform:translate(0,0);}33%{transform:translate(35px,-22px);}66%{transform:translate(-22px,14px);}}
 .intro-content{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;}
-
-/* Couple photo */
 .couple-photo-wrap{position:relative;margin-bottom:16px;opacity:0;animation:fadeUp 1.2s 0s cubic-bezier(0.16,1,0.3,1) forwards;}
 .couple-photo-ring{width:136px;height:136px;border-radius:50%;border:3px solid rgba(201,169,110,0.55);padding:4px;background:radial-gradient(circle,rgba(201,169,110,0.15) 0%,transparent 70%);position:relative;animation:photoGlow 4s ease-in-out infinite;}
 .couple-photo-ring::before{content:'';position:absolute;inset:-12px;border-radius:50%;border:1px solid rgba(201,169,110,0.25);animation:ringPulse 3.5s ease-in-out infinite;}
@@ -43,7 +39,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .petal:nth-child(4){bottom:-10px;left:50%;transform:translateX(-50%);animation-duration:4s;animation-delay:-2s;}
 .petal:nth-child(5){top:50%;left:-10px;transform:translateY(-50%);animation-duration:3.8s;animation-delay:-1.5s;}
 @keyframes petalFloat{0%,100%{opacity:0.55;transform:scale(1) translateY(0);}50%{opacity:1;transform:scale(1.35) translateY(-4px);}}
-
 .intro-eyebrow{font-size:11px;letter-spacing:7px;text-transform:uppercase;color:rgba(255,255,255,0.75);opacity:0;animation:fadeUp 1s 0.3s ease forwards;}
 .intro-script{font-family:'Passions Conflict',cursive;font-size:clamp(44px,8vw,72px);color:#fff;text-shadow:0 0 80px rgba(201,169,110,0.35);opacity:0;animation:fadeUp 1.4s 0.6s cubic-bezier(0.16,1,0.3,1) forwards;letter-spacing:3px;}
 .heart-wrap{margin-top:28px;cursor:pointer;opacity:0;animation:fadeUp 1s 1.4s ease forwards;}
@@ -60,8 +55,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 @keyframes tapBlink{0%,100%{opacity:0.35;}50%{opacity:0.75;}}
 .music-hint{margin-top:8px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);opacity:0;animation:fadeUp 0.8s 2.5s ease forwards;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
-
-/* ═══ MUSIC BTN ═══ */
 .music-btn{position:fixed;top:18px;right:18px;z-index:9000;width:42px;height:42px;border-radius:50%;background:rgba(201,169,110,0.14);backdrop-filter:blur(14px);border:1px solid rgba(201,169,110,0.3);display:none;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s,transform 0.2s;box-shadow:0 4px 20px rgba(0,0,0,0.25);}
 .music-btn:hover{background:rgba(201,169,110,0.26);transform:scale(1.1);}
 .bar{display:flex;gap:2px;align-items:flex-end;height:16px;}
@@ -69,23 +62,18 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .bar span:nth-child(1){height:8px;animation-delay:0s;} .bar span:nth-child(2){height:14px;animation-delay:0.15s;} .bar span:nth-child(3){height:10px;animation-delay:0.3s;} .bar span:nth-child(4){height:6px;animation-delay:0.45s;}
 .music-btn.paused .bar span{animation-play-state:paused;}
 @keyframes barDance{0%,100%{transform:scaleY(0.5);}50%{transform:scaleY(1);}}
-
-/* ═══ MAIN & NAV ═══ */
 #main{display:none;}
 .nav-dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:8888;display:flex;flex-direction:column;gap:12px;}
 .nav-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,252,248,0.22);cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);}
 .nav-dot.active{background:var(--gold);height:20px;border-radius:3px;box-shadow:0 0 10px rgba(201,169,110,0.5);}
-
-/* ═══ SECTIONS — snap scroll ═══ */
 .section{height:100svh;min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always;background:#100c0b;}
 .bg-img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;z-index:0;}
 .overlay{position:absolute;inset:0;z-index:1;}
-.s0 .overlay{background:linear-gradient(165deg,rgba(30,18,12,0.72) 0%,rgba(20,12,8,0.38) 50%,rgba(30,18,12,0.78) 100%);}
-.s1 .overlay{background:linear-gradient(165deg,rgba(20,14,10,0.68) 0%,rgba(15,10,7,0.32) 50%,rgba(20,14,10,0.74) 100%);}
-.s2 .overlay{background:linear-gradient(165deg,rgba(25,15,10,0.70) 0%,rgba(15,10,7,0.35) 50%,rgba(25,15,10,0.76) 100%);}
-.s3 .overlay{background:linear-gradient(165deg,rgba(20,12,8,0.72) 0%,rgba(12,8,5,0.36) 50%,rgba(20,12,8,0.78) 100%);}
-
-/* FOG */
+.s0{background:radial-gradient(ellipse at 45% 40%,#231412 0%,#080504 100%) !important;}
+.s0 .overlay{background:transparent;}
+.s1 .overlay{background:radial-gradient(ellipse at 45% 40%,rgba(35,20,18,0.88) 0%,rgba(8,5,4,0.92) 100%);}
+.s2 .overlay{background:radial-gradient(ellipse at 45% 40%,rgba(35,20,18,0.88) 0%,rgba(8,5,4,0.92) 100%);}
+.s3 .overlay{background:radial-gradient(ellipse at 45% 40%,rgba(35,20,18,0.88) 0%,rgba(8,5,4,0.92) 100%);}
 .fog-veil{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 130% 70% at 50% 50%,rgba(255,252,248,0.03) 0%,rgba(255,252,248,0.13) 100%);}
 .clouds-wrap{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;}
 .c{position:absolute;border-radius:50%;filter:blur(55px);will-change:transform;background:radial-gradient(circle,rgba(255,252,248,0.5) 0%,rgba(255,252,248,0) 70%);}
@@ -117,17 +105,12 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .particles{position:absolute;inset:0;z-index:4;pointer-events:none;}
 .fall-heart{position:absolute;pointer-events:none;animation:fallH linear infinite;}
 @keyframes fallH{0%{transform:translateY(-30px) rotate(0deg);opacity:0;}10%{opacity:.75;}90%{opacity:.35;}100%{transform:translateY(110vh) rotate(360deg);opacity:0;}}
-
-/* ═══ SCROLL REVEAL ═══ */
 .reveal,.reveal-left,.reveal-right,.reveal-scale,.reveal-blur{transition-property:opacity,transform,filter;transition-timing-function:cubic-bezier(0.16,1,0.3,1);transition-duration:1s;}
 .reveal{opacity:0;transform:translateY(38px);} .reveal-left{opacity:0;transform:translateX(-48px);} .reveal-right{opacity:0;transform:translateX(48px);} .reveal-scale{opacity:0;transform:scale(0.82);} .reveal-blur{opacity:0;filter:blur(12px);transform:translateY(16px);}
 .reveal.v,.reveal-left.v,.reveal-right.v,.reveal-scale.v,.reveal-blur.v{opacity:1;transform:none;filter:none;}
 .d1{transition-delay:0s;}.d2{transition-delay:.14s;}.d3{transition-delay:.28s;}.d4{transition-delay:.42s;}.d5{transition-delay:.56s;}.d6{transition-delay:.70s;}.d7{transition-delay:.84s;}
-
-/* ═══ CONTENT ═══ */
 .content{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 10px;width:100%;max-width:700px;scrollbar-width:none;-ms-overflow-style:none;}
 .content::-webkit-scrollbar{display:none;}
-
 .eyebrow{font-size:clamp(9px,2.5vw,13px);letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:6px;text-shadow:0 1px 10px rgba(0,0,0,0.5);}
 .script-big{font-family:'Passions Conflict',cursive;font-size:clamp(56px,14vw,120px);color:#fff;line-height:0.92;text-shadow:0 4px 50px rgba(0,0,0,0.55),0 0 100px rgba(255,252,248,0.1);letter-spacing:1px;}
 .serif-sub{font-family:'Passions Conflict',cursive;font-size:clamp(22px,5.5vw,48px);color:rgba(255,255,255,0.82);font-weight:400;margin-bottom:0;line-height:1;}
@@ -135,18 +118,14 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .divider{display:flex;align-items:center;gap:10px;margin:8px 0;width:100%;max-width:260px;}
 .div-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
 .div-gem{font-size:12px;color:rgba(255,255,255,0.7);letter-spacing:4px;}
-
 .pill{background:rgba(255,252,248,0.09);backdrop-filter:blur(22px);border:1px solid rgba(255,252,248,0.18);border-radius:20px;padding:12px 20px;font-size:clamp(13px,3.5vw,16px);font-weight:300;color:#fff;line-height:1.7;box-shadow:0 8px 34px rgba(0,0,0,0.28),inset 0 1px 0 rgba(255,255,255,0.1);transition:transform 0.3s ease;margin-top:12px;}
 .pill:hover{transform:translateY(-3px);}
-
 .dcard{background:rgba(255,252,248,0.09);backdrop-filter:blur(26px);border:1px solid rgba(201,169,110,0.32);border-radius:22px;padding:22px 32px;box-shadow:0 20px 60px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.07);transition:transform 0.3s ease;min-width:140px;}
 .dcard:hover{transform:translateY(-4px);}
 .dcard .lbl{font-family:'EB Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#fff;opacity:0.65;margin-bottom:8px;font-weight:500;}
 .dcard .val{font-family:'EB Garamond',serif;font-size:clamp(18px,3vw,28px);color:#fff;line-height:1.2;font-weight:600;letter-spacing:0.5px;}
 .dcard .hint{font-family:'EB Garamond',serif;font-style:italic;font-weight:500;margin-top:6px;font-size:14px;color:rgba(255,255,255,0.65);}
 .cards-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:20px;width:100%;}
-
-/* Date ring + wave */
 .date-ring-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;margin:10px auto;}
 .wave-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(201,169,110,0.6);animation:waveExpand 2.4s ease-out infinite;pointer-events:none;}
 .wave-ring:nth-child(1){width:clamp(140px,38vw,186px);height:clamp(140px,38vw,186px);animation-delay:0s;}
@@ -160,33 +139,22 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .dr-month{font-family:'EB Garamond',serif;font-size:clamp(9px,2.2vw,13px);letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:2px;font-weight:500;opacity:0.8;}
 .dr-day{font-family:'EB Garamond',serif;font-size:clamp(40px,11vw,60px);font-weight:700;color:#fff;line-height:1;}
 .dr-year{font-family:'EB Garamond',serif;font-size:clamp(9px,2.2vw,13px);letter-spacing:4px;color:rgba(255,255,255,0.6);margin-top:2px;font-weight:500;}
-
-
-/* Horizontal info row — Day / Time inline */
 .info-row{display:flex;align-items:stretch;gap:0;width:100%;max-width:340px;margin-top:10px;background:rgba(255,252,248,0.07);backdrop-filter:blur(22px);border:1px solid rgba(201,169,110,0.28);border-radius:18px;overflow:hidden;}
 .info-cell{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 10px;text-align:center;}
 .info-cell:not(:last-child){border-right:1px solid rgba(201,169,110,0.2);}
 .info-cell .lbl{font-family:'EB Garamond',serif;font-size:clamp(8px,2vw,11px);letter-spacing:4px;text-transform:uppercase;color:#fff;opacity:0.6;margin-bottom:5px;font-weight:500;}
 .info-cell .val{font-family:'EB Garamond',serif;font-size:clamp(14px,4vw,22px);color:#fff;font-weight:600;line-height:1.1;}
 .info-cell .hint{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.55);margin-top:3px;}
-
-/* Venue pill */
 .venue-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:340px;margin-top:8px;margin-bottom:16px;background:rgba(255,252,248,0.07);backdrop-filter:blur(22px);border:1px solid rgba(201,169,110,0.28);border-radius:18px;padding:12px 20px;text-align:center;}
 .venue-pill .lbl{font-family:'EB Garamond',serif;font-size:clamp(8px,2vw,11px);letter-spacing:4px;text-transform:uppercase;color:#fff;opacity:0.6;margin-bottom:5px;font-weight:500;}
 .venue-pill .val{font-family:'EB Garamond',serif;font-size:clamp(15px,4.5vw,24px);color:#fff;font-weight:600;}
 .venue-pill .hint{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.55);margin-top:3px;}
-
-/* Monogram */
 .monogram{width:96px;height:96px;border-radius:50%;border:1px solid rgba(201,169,110,0.32);display:flex;align-items:center;justify-content:center;font-family:'Great Vibes',cursive;font-size:34px;color:#fff;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);margin-bottom:4px;position:relative;box-shadow:0 0 40px rgba(201,169,110,0.1);}
 .monogram::before{content:'';position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);}
-
-/* Quote & badge */
 .quote{font-style:italic;font-size:clamp(16px,2.5vw,22px);color:rgba(255,255,255,0.9);line-height:1.85;max-width:440px;position:relative;padding:0 30px;margin-top:4px;}
 .quote::before,.quote::after{font-family:'Great Vibes',cursive;font-style:normal;font-size:60px;color:rgba(255,255,255,0.4);line-height:0;position:absolute;}
 .quote::before{content:'\201C';top:14px;left:0;} .quote::after{content:'\201D';bottom:-18px;right:0;}
 .badge{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.35);border-radius:100px;padding:10px 30px;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#fff;background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);margin-top:18px;}
-
-/* ═══ Engagement Ring Shine ═══ */
 .ring-wrap{position:relative;display:inline-block;margin-bottom:6px;}
 .ring-emoji{font-size:clamp(44px,10vw,64px);display:block;animation:ringSpin 6s ease-in-out infinite,ringGlow 2.5s ease-in-out infinite;}
 @keyframes ringSpin{0%,100%{transform:rotate(-8deg) scale(1);}30%{transform:rotate(8deg) scale(1.12);}60%{transform:rotate(-4deg) scale(1.06);}}
@@ -197,8 +165,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .ring-sparkle:nth-child(3){bottom:2px;right:-2px;animation-duration:1.6s;animation-delay:0.8s;}
 .ring-sparkle:nth-child(4){top:-6px;left:8px;animation-duration:2s;animation-delay:0.2s;}
 @keyframes sparkleFlash{0%,100%{opacity:0;transform:scale(0.3);}40%,60%{opacity:1;transform:scale(1);}}
-
-/* ═══ Christian Thali ═══ */
 .thali-wrap{position:relative;display:inline-block;margin-bottom:6px;}
 .thali-svg{width:clamp(44px,10vw,62px);height:clamp(60px,13vw,84px);animation:thaliGlow 2.8s ease-in-out infinite,thaliFloat 4s ease-in-out infinite;}
 @keyframes thaliGlow{0%,100%{filter:drop-shadow(0 0 10px rgba(255,220,120,0.7)) drop-shadow(0 0 22px rgba(255,200,80,0.35));}50%{filter:drop-shadow(0 0 28px rgba(255,220,120,1)) drop-shadow(0 0 50px rgba(255,200,80,0.7)) drop-shadow(0 0 75px rgba(255,180,60,0.4));}}
@@ -208,8 +174,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .thali-sparkle:nth-child(2){top:6px;right:-5px;animation-duration:2s;animation-delay:0.6s;}
 .thali-sparkle:nth-child(3){bottom:-2px;left:4px;animation-duration:1.7s;animation-delay:0.3s;}
 .thali-sparkle:nth-child(4){top:-4px;left:10px;animation-duration:1.9s;animation-delay:0.9s;}
-
-/* ═══ Map button ═══ */
 .map-btn{display:inline-flex;align-items:center;gap:0;margin-top:0;position:relative;background:transparent;border:none;padding:0;text-decoration:none;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);}
 .map-btn-inner{display:inline-flex;align-items:center;gap:12px;background:rgba(0,0,0,0.45);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:12px 22px 12px 12px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 10px 40px rgba(0,0,0,0.55);}
 .map-btn:hover .map-btn-inner{background:rgba(0,0,0,0.65);border-color:rgba(255,255,255,0.28);box-shadow:0 18px 55px rgba(0,0,0,0.65);transform:translateY(-4px);}
@@ -219,18 +183,19 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .map-btn:hover .map-btn-label{letter-spacing:5px;}
 .map-btn-arrow{font-size:20px;color:rgba(255,255,255,0.4);transition:all 0.35s ease;margin-left:6px;line-height:1;}
 .map-btn:hover .map-btn-arrow{color:rgba(255,255,255,0.9);transform:translateX(5px);}
-
-/* Scroll arrow */
+.map-btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.s0 .mist-bot,.s0 .heaven,.s0 .fog-veil,.s0 .wisps,.s0 .clouds-wrap{display:none;}
+.s1 .mist-bot,.s2 .mist-bot,.s3 .mist-bot{opacity:0.3;}
+.s1 .heaven,.s2 .heaven,.s3 .heaven{opacity:0.25;}
+.s1 .fog-veil,.s2 .fog-veil,.s3 .fog-veil{opacity:0.3;}
 .arrow{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:8888;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0.6;transition:opacity 0.4s ease;}
 .arrow:hover{opacity:1;}
 .adot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:adrop 1.7s ease-in-out infinite;}
 .adot:nth-child(2){animation-delay:.22s;} .adot:nth-child(3){animation-delay:.44s;}
 @keyframes adrop{0%,100%{opacity:.2;transform:translateY(-5px);}50%{opacity:1;transform:translateY(5px);}}
-
 .ripple-ring{position:fixed;pointer-events:none;z-index:99999;border-radius:50%;border:2px solid rgba(201,169,110,0.7);transform:scale(0);opacity:1;animation:rippleOut 0.7s cubic-bezier(0.16,1,0.3,1) forwards;}
 @keyframes rippleOut{0%{transform:scale(0);opacity:1;}100%{transform:scale(4);opacity:0;}}
 </style>
-<link rel="preload" as="image" href="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/watercolor-floral-silhouette-wedding-invitations-with-light-blue-theme-page-border-background-word-template_2daf0e3450__1131_1600.avif">
 </head>
 <body>
 
@@ -241,17 +206,17 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
   <div class="intro-content">
     <div class="couple-photo-wrap">
       <div class="couple-photo-ring">
-        <img class="couple-photo" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/sdvv.png" alt="Finhas & Anjitha" onerror="this.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/e4d56a2618ad1278d69d4aee0d152c16.jpg'">
-        <span class="petal">🌸</span><span class="petal">✨</span><span class="petal">🌸</span><span class="petal">✨</span>
+        <img class="couple-photo" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/sdvv.png" alt="Finhas &amp; Anjitha" onerror="this.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/e4d56a2618ad1278d69d4aee0d152c16.jpg'">
+        <span class="petal">&#x1F338;</span><span class="petal">&#x2728;</span><span class="petal">&#x1F338;</span><span class="petal">&#x2728;</span>
       </div>
     </div>
     <div class="intro-eyebrow">You are warmly invited</div>
-    <div class="intro-script">Finhas & Anjitha</div>
+    <div class="intro-script">Finhas &amp; Anjitha</div>
     <div class="heart-wrap" id="heartWrap" onclick="openInvite(event)">
-      <div class="heart-ring"><span class="heart-icon" id="heartIcon">❤️</span></div>
+      <div class="heart-ring"><span class="heart-icon" id="heartIcon">&#x2764;&#xFE0F;</span></div>
     </div>
     <div class="tap-label">Touch to open</div>
-    <div class="music-hint">♪ Music will play</div>
+    <div class="music-hint">&#9834; Music will play</div>
   </div>
 </div>
 
@@ -269,7 +234,6 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 
   <!-- S0: COVER HERO -->
   <section class="section s0" id="s0">
-    <img loading="lazy" decoding="async" class="bg-img" fetchpriority="high" decoding="async" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/watercolor-floral-silhouette-wedding-invitations-with-light-blue-theme-page-border-background-word-template_2daf0e3450__1131_1600.avif" alt="">
     <div class="overlay"></div><div class="fog-veil"></div>
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
@@ -278,14 +242,14 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
       <div class="script-big reveal d1">Finhas</div>
       <div class="serif-sub reveal d2">and the love of his life</div>
       <div class="script-big reveal d3">Anjitha</div>
-      <div class="divider reveal d4" style="margin:18px auto;"><div class="div-line"></div><div class="div-gem">✦ ✦ ✦</div><div class="div-line"></div></div>
+      <div class="divider reveal d4" style="margin:18px auto;"><div class="div-line"></div><div class="div-gem">&#10022; &#10022; &#10022;</div><div class="div-line"></div></div>
       <div class="pill reveal-blur d5">Together with our families, we joyfully invite you<br>to witness and celebrate our sacred union</div>
     </div>
   </section>
 
   <!-- S1: ENGAGEMENT -->
   <section class="section s1" id="s1">
-    <img loading="lazy" decoding="async" class="bg-img" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_4144924144924144.png" alt="">
+    <img loading="lazy" decoding="async" class="bg-img" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_4144924144924144.png" alt="">
     <div class="overlay"></div><div class="fog-veil"></div>
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
@@ -293,41 +257,31 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
     <div class="content">
       <div class="ring-wrap reveal-scale d1">
         <span class="ring-sparkle"></span><span class="ring-sparkle"></span><span class="ring-sparkle"></span><span class="ring-sparkle"></span>
-        <span class="ring-emoji">💍</span>
+        <span class="ring-emoji">&#x1F48D;</span>
       </div>
       <div class="eyebrow reveal d2">First Comes</div>
       <div class="section-title reveal d3">The Engagement</div>
-      <div class="divider reveal d3" style="margin:10px auto 0;"><div class="div-line"></div><div class="div-gem">✦ ✦ ✦</div><div class="div-line"></div></div>
+      <div class="divider reveal d3" style="margin:10px auto 0;"><div class="div-line"></div><div class="div-gem">&#10022; &#10022; &#10022;</div><div class="div-line"></div></div>
       <div class="date-ring-wrap">
         <div class="wave-ring"></div><div class="wave-ring"></div><div class="wave-ring"></div>
         <div class="date-ring reveal-scale d4">
-          <div class="dr-month">April</div>
-          <div class="dr-day">11</div>
-          <div class="dr-year">2026</div>
+          <div class="dr-month">April</div><div class="dr-day">11</div><div class="dr-year">2026</div>
         </div>
       </div>
       <div class="info-row reveal d5">
-        <div class="info-cell">
-          <div class="lbl">Day</div>
-          <div class="val">Saturday</div>
-          <div class="hint">April 11</div>
-        </div>
-        <div class="info-cell">
-          <div class="lbl">Time</div>
-          <div class="val">11 AM – 2 PM</div>
-          <div class="hint">All afternoon</div>
-        </div>
+        <div class="info-cell"><div class="lbl">Day</div><div class="val">Saturday</div><div class="hint">April 11</div></div>
+        <div class="info-cell"><div class="lbl">Time</div><div class="val">11 AM &#8211; 2 PM</div><div class="hint">All afternoon</div></div>
       </div>
       <div class="venue-pill reveal-blur d6">
         <div class="lbl">Venue</div>
-        <div class="val">ABC Hall</div>
+        <div class="val">St. Maximilian Kolbe Church Auditorium, East Vazhappilly</div>
         <div class="hint">Muvattupuzha, Kerala</div>
       </div>
-      <a class="map-btn reveal-scale d7" href="https://maps.google.com/?q=ABC+Hall+Muvattupuzha+Kerala" target="_blank" rel="noopener">
+      <a class="map-btn reveal-scale d7" href="https://maps.app.goo.gl/c4VEndwxJ92Trzyp7" target="_blank" rel="noopener">
         <span class="map-btn-inner">
           <span class="map-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <span class="map-btn-label">Locate the Venue</span>
-          <span class="map-btn-arrow">›</span>
+          <span class="map-btn-arrow">&#8250;</span>
         </span>
       </a>
     </div>
@@ -335,7 +289,7 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 
   <!-- S2: WEDDING CEREMONY -->
   <section class="section s2" id="s2">
-    <img loading="lazy" decoding="async" class="bg-img" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_9q70b19q70b19q70.png" alt="">
+    <img loading="lazy" decoding="async" class="bg-img" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_9q70b19q70b19q70.png" alt="">
     <div class="overlay"></div><div class="fog-veil"></div>
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
@@ -356,68 +310,65 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
           <line x1="20" y1="38" x2="34" y2="38" stroke="#FFD700" stroke-width="2.2" stroke-linecap="round"/>
           <circle cx="27" cy="38" r="2.2" fill="#FFD700" opacity="0.85"/>
           <circle cx="27" cy="69" r="1.5" fill="#FFD700" opacity="0.6"/>
-          <defs>
-            <linearGradient id="leafGrad" x1="27" y1="18" x2="27" y2="72" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FFE87A" stop-opacity="0.25"/>
-              <stop offset="50%" stop-color="#FFD700" stop-opacity="0.12"/>
-              <stop offset="100%" stop-color="#FFA500" stop-opacity="0.2"/>
-            </linearGradient>
-          </defs>
+          <defs><linearGradient id="leafGrad" x1="27" y1="18" x2="27" y2="72" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFE87A" stop-opacity="0.25"/>
+            <stop offset="50%" stop-color="#FFD700" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#FFA500" stop-opacity="0.2"/>
+          </linearGradient></defs>
         </svg>
       </div>
       <div class="eyebrow reveal d2">Mark Your Calendar</div>
       <div class="section-title reveal d3">The Wedding Ceremony</div>
-      <div class="divider reveal d3" style="margin:10px auto 0;"><div class="div-line"></div><div class="div-gem">✦</div><div class="div-line"></div></div>
+      <div class="divider reveal d3" style="margin:10px auto 0;"><div class="div-line"></div><div class="div-gem">&#10022;</div><div class="div-line"></div></div>
       <div class="date-ring-wrap">
         <div class="wave-ring"></div><div class="wave-ring"></div><div class="wave-ring"></div>
         <div class="date-ring reveal-scale d4">
-          <div class="dr-month">April</div>
-          <div class="dr-day">19</div>
-          <div class="dr-year">2026</div>
+          <div class="dr-month">April</div><div class="dr-day">19</div><div class="dr-year">2026</div>
         </div>
       </div>
       <div class="info-row reveal d5">
-        <div class="info-cell">
-          <div class="lbl">Day</div>
-          <div class="val">Sunday</div>
-          <div class="hint">April 19</div>
-        </div>
-        <div class="info-cell">
-          <div class="lbl">Time</div>
-          <div class="val">12:00 PM</div>
-          <div class="hint">Doors open 11:30</div>
-        </div>
+        <div class="info-cell"><div class="lbl">Day</div><div class="val">Sunday</div><div class="hint">April 19</div></div>
+        <div class="info-cell"><div class="lbl">Time</div><div class="val">12:00 PM</div><div class="hint">Doors open 11:30</div></div>
       </div>
       <div class="venue-pill reveal-blur d6">
         <div class="lbl">Venue</div>
-        <div class="val">St Mary's Church</div>
-        <div class="hint">Dubai, United Arab Emirates</div>
+        <div class="val">St Peter's and St Paul's Orthodox Syrian Church, Puthencruz</div>
+        <div class="hint">Post-Wedding Reception at Puthencruz Merchants Association Auditorium</div>
       </div>
-      <a class="map-btn reveal-scale d7" href="https://maps.google.com/?q=St+Mary+Catholic+Church+Dubai" target="_blank" rel="noopener">
-        <span class="map-btn-inner">
-          <span class="map-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <span class="map-btn-label">Locate the Venue</span>
-          <span class="map-btn-arrow">›</span>
-        </span>
-      </a>
+      <div class="map-btn-row reveal-scale d7">
+        <a class="map-btn" href="https://maps.app.goo.gl/eUHWp1pG3XdEyfit7" target="_blank" rel="noopener">
+          <span class="map-btn-inner">
+            <span class="map-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="map-btn-label">Locate Church</span>
+            <span class="map-btn-arrow">&#8250;</span>
+          </span>
+        </a>
+        <a class="map-btn" href="https://maps.app.goo.gl/puthencruzreception" target="_blank" rel="noopener">
+          <span class="map-btn-inner">
+            <span class="map-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+            <span class="map-btn-label">Locate Reception</span>
+            <span class="map-btn-arrow">&#8250;</span>
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- S3: CLOSING -->
   <section class="section s3" id="s3">
-    <img loading="lazy" decoding="async" class="bg-img" loading="lazy" decoding="async" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_dvgxofdvgxofdvgx.png" alt="">
+    <img loading="lazy" decoding="async" class="bg-img" src="https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/Gemini_Generated_Image_dvgxofdvgxofdvgx.png" alt="">
     <div class="overlay"></div><div class="fog-veil"></div>
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
     <div class="mist-bot"></div><div class="heaven"></div><div class="sparkles"></div><div class="particles"></div>
     <div class="content">
-      <div class="monogram reveal-scale d1">F&A</div>
+      <div class="monogram reveal-scale d1">F&amp;A</div>
       <div class="eyebrow reveal d2" style="margin-top:14px;">Join us at</div>
-      <div class="section-title reveal d3">St Mary's Church</div>
+      <div class="section-title reveal d3">St Peter's and St Paul's Orthodox Syrian Church</div>
       <div class="eyebrow reveal d4" style="color:rgba(255,255,255,0.8);font-size:14px;letter-spacing:3px;margin-top:6px;">Dubai, United Arab Emirates</div>
-      <div class="divider reveal d5" style="margin:20px auto;"><div class="div-line"></div><div class="div-gem">✦ ✦ ✦</div><div class="div-line"></div></div>
+      <div class="divider reveal d5" style="margin:20px auto;"><div class="div-line"></div><div class="div-gem">&#10022; &#10022; &#10022;</div><div class="div-line"></div></div>
       <div class="quote reveal-blur d6">Two souls, one heart.<br>A love written in the stars,<br>celebrated among the ones we cherish most.</div>
-      <div class="badge reveal d7">With All Our Love · Finhas &amp; Anjitha</div>
+      <div class="badge reveal d7">With All Our Love &middot; Finhas &amp; Anjitha</div>
     </div>
   </section>
 </div>
@@ -429,42 +380,12 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 
 <script>
 const audio=document.getElementById('bgAudio');
-let musicPlaying=false;
-let audioLoaded=false;
-
-function loadAudio(){
-  if(audioLoaded) return;
-  audioLoaded=true;
-  audio.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/firework.mp3';
-  audio.load();
-}
-
-function startMusic(){
-  loadAudio();
-  const tryPlay=()=>{
-    audio.volume=0;
-    const p=audio.play();
-    if(p!==undefined){
-      p.then(()=>{
-        musicPlaying=true;
-        fadeAudio(0,0.45,3000);
-        showMusicBtn(true);
-      }).catch(()=>{
-        showMusicBtn(false);
-      });
-    }
-  };
-  // Give it 300ms to start buffering, then try
-  setTimeout(tryPlay,300);
-}
+let musicPlaying=false,audioLoaded=false;
+function loadAudio(){if(audioLoaded)return;audioLoaded=true;audio.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/firework.mp3';audio.load();}
+function startMusic(){loadAudio();const tryPlay=()=>{audio.volume=0;const p=audio.play();if(p!==undefined){p.then(()=>{musicPlaying=true;fadeAudio(0,0.45,3000);showMusicBtn(true);}).catch(()=>{showMusicBtn(false);});}};setTimeout(tryPlay,300);}
 function stopMusic(){fadeAudio(audio.volume,0,800,()=>{audio.pause();});musicPlaying=false;showMusicBtn(false);}
 function fadeAudio(from,to,ms,cb){const steps=40,step=(to-from)/steps;let cur=from;const t=setInterval(()=>{cur+=step;audio.volume=Math.max(0,Math.min(1,cur));if((step>0&&cur>=to)||(step<0&&cur<=to)){clearInterval(t);if(cb)cb();}},ms/steps);}
-function toggleMusic(){
-  loadAudio();
-  if(musicPlaying){stopMusic();}
-  else{const p=audio.play();if(p!==undefined){p.then(()=>{musicPlaying=true;audio.volume=0.45;showMusicBtn(true);}).catch(()=>{});}}
-  document.getElementById('musicBtn').classList.toggle('paused',!musicPlaying);
-}
+function toggleMusic(){loadAudio();if(musicPlaying){stopMusic();}else{const p=audio.play();if(p!==undefined){p.then(()=>{musicPlaying=true;audio.volume=0.45;showMusicBtn(true);}).catch(()=>{})}}document.getElementById('musicBtn').classList.toggle('paused',!musicPlaying);}
 function showMusicBtn(p){const b=document.getElementById('musicBtn');b.style.display='flex';b.classList.toggle('active',p);b.classList.toggle('paused',!p);}
 let audioCtx=null;
 function initCtx(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();}
@@ -473,13 +394,13 @@ function spawnRipple(x,y){const r=document.createElement('div');r.className='rip
 function openInvite(e){playHeartSound();const icon=document.getElementById('heartIcon');icon.classList.add('pop');setTimeout(()=>icon.classList.remove('pop'),400);const t=(e.touches&&e.touches[0])?e.touches[0]:e;spawnRipple(t.clientX||innerWidth/2,t.clientY||innerHeight/2);setTimeout(()=>{const intro=document.getElementById('intro');intro.classList.add('hide');setTimeout(()=>{intro.style.display='none';document.getElementById('main').style.display='block';initAll();setTimeout(startMusic,700);},1900);},320);}
 function initAll(){generateSparkles();generateHearts();setupScrollReveal();setupParallax();setupNavDots();setupArrow();setTimeout(()=>{document.querySelectorAll('#s0 .reveal,#s0 .reveal-scale,#s0 .reveal-blur').forEach(el=>el.classList.add('v'));},100);}
 function setupScrollReveal(){const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.reveal-blur').forEach(el=>obs.observe(el));}
-function setupParallax(){ /* disabled — snap scroll sections don't need parallax */ }
+function setupParallax(){}
 function setupNavDots(){const sections=['s0','s1','s2','s3'].map(id=>document.getElementById(id));const dots=document.querySelectorAll('.nav-dot');const themeColors=['#0d0a09','#0e0c0b','#100d0b','#0a0806'];const themeMeta=document.querySelector('meta[name="theme-color"]');const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const i=sections.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('active',i===j));if(themeMeta)themeMeta.setAttribute('content',themeColors[i]||'#100c0b');}});},{threshold:0.5});sections.forEach(s=>{if(s)obs.observe(s);});}
 function goTo(i){document.getElementById(['s0','s1','s2','s3'][i]).scrollIntoView({behavior:'smooth'});}
 function scrollDown(){window.scrollBy({top:innerHeight,behavior:'smooth'});}
 function setupArrow(){const a=document.getElementById('arrow');window.addEventListener('scroll',()=>{const atBot=innerHeight+scrollY>=document.body.offsetHeight-100;a.style.opacity=atBot?'0':'0.6';a.style.pointerEvents=atBot?'none':'auto';},{passive:true});}
-function generateSparkles(){document.querySelectorAll('.sparkles').forEach(c=>{for(let i=0;i<22;i++){const s=document.createElement('div');s.className='sparkle';s.style.left=Math.random()*100+'%';s.style.top=(15+Math.random()*65)+'%';const sz=1.5+Math.random()*3.5;s.style.width=s.style.height=sz+'px';s.style.animationDuration=(4+Math.random()*7)+'s';s.style.animationDelay=(Math.random()*10)+'s';c.appendChild(s);}});}
-function generateHearts(){const em=['❤️','🤍','✨','🌸'];document.querySelectorAll('.particles').forEach(c=>{for(let i=0;i<14;i++){const h=document.createElement('div');h.className='fall-heart';h.innerText=em[Math.floor(Math.random()*em.length)];h.style.left=Math.random()*100+'%';h.style.fontSize=(9+Math.random()*9)+'px';h.style.animationDuration=(8+Math.random()*10)+'s';h.style.animationDelay=(Math.random()*14)+'s';h.style.zIndex=Math.random()>.5?'4':'2';c.appendChild(h);}});}
+function generateSparkles(){document.querySelectorAll('.sparkles').forEach(c=>{for(let i=0;i<22;i++){const s=document.createElement('div');s.className='sparkle';s.style.left=Math.random()*100+'%';s.style.top=(15+Math.random()*65)+'%';const sz=1.5+Math.random()*3.5;s.style.width=s.style.height=sz+'px';s.style.animationDuration=(4+Math.random()*7)+'s';s.style.animationDelay=(Math.random()*10)+'s';c.appendChild(s);}}); }
+function generateHearts(){const em=['❤️','🤍','✨','🌸'];document.querySelectorAll('.particles').forEach(c=>{for(let i=0;i<14;i++){const h=document.createElement('div');h.className='fall-heart';h.innerText=em[Math.floor(Math.random()*em.length)];h.style.left=Math.random()*100+'%';h.style.fontSize=(9+Math.random()*9)+'px';h.style.animationDuration=(8+Math.random()*10)+'s';h.style.animationDelay=(Math.random()*14)+'s';h.style.zIndex=Math.random()>.5?'4':'2';c.appendChild(h);}}); }
 </script>
 </body>
 </html>
