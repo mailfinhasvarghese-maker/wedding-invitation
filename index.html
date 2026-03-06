@@ -381,7 +381,7 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 <script>
 const audio=document.getElementById('bgAudio');
 let musicPlaying=false,audioLoaded=false;
-function loadAudio(){if(audioLoaded)return;audioLoaded=true;audio.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/firework.mp3';audio.load();}
+function loadAudio(){if(audioLoaded)return;audioLoaded=true;audio.src='https://raw.githubusercontent.com/mailfinhasvarghese-maker/wedding-invitation/main/0306(1).MP3';audio.load();}
 function startMusic(){loadAudio();const tryPlay=()=>{audio.volume=0;const p=audio.play();if(p!==undefined){p.then(()=>{musicPlaying=true;fadeAudio(0,0.45,3000);showMusicBtn(true);}).catch(()=>{showMusicBtn(false);});}};setTimeout(tryPlay,300);}
 function stopMusic(){fadeAudio(audio.volume,0,800,()=>{audio.pause();});musicPlaying=false;showMusicBtn(false);}
 function fadeAudio(from,to,ms,cb){const steps=40,step=(to-from)/steps;let cur=from;const t=setInterval(()=>{cur+=step;audio.volume=Math.max(0,Math.min(1,cur));if((step>0&&cur>=to)||(step<0&&cur<=to)){clearInterval(t);if(cb)cb();}},ms/steps);}
