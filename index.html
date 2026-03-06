@@ -71,8 +71,8 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .nav-dot.active{background:var(--gold);height:20px;border-radius:3px;box-shadow:0 0 10px rgba(201,169,110,0.5);}
 
 /* ═══ SECTIONS — snap scroll ═══ */
-.section{height:100vh;min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:flex-start;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always;padding-top:24px;}
-.bg-img{position:absolute;inset:0;width:100%;height:115%;top:-7%;object-fit:cover;z-index:0;will-change:transform;}
+.section{height:100svh;min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always;}
+.bg-img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;z-index:0;}
 .overlay{position:absolute;inset:0;z-index:1;}
 .s0 .overlay{background:linear-gradient(165deg,rgba(30,18,12,0.72) 0%,rgba(20,12,8,0.38) 50%,rgba(30,18,12,0.78) 100%);}
 .s1 .overlay{background:linear-gradient(165deg,rgba(20,14,10,0.68) 0%,rgba(15,10,7,0.32) 50%,rgba(20,14,10,0.74) 100%);}
@@ -119,18 +119,18 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .d1{transition-delay:0s;}.d2{transition-delay:.14s;}.d3{transition-delay:.28s;}.d4{transition-delay:.42s;}.d5{transition-delay:.56s;}.d6{transition-delay:.70s;}.d7{transition-delay:.84s;}
 
 /* ═══ CONTENT ═══ */
-.content{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 24px 40px;width:100%;max-width:700px;overflow-y:auto;max-height:calc(100vh - 24px);scrollbar-width:none;-ms-overflow-style:none;}
+.content{position:relative;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 10px;width:100%;max-width:700px;scrollbar-width:none;-ms-overflow-style:none;}
 .content::-webkit-scrollbar{display:none;}
 
-.eyebrow{font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#fff;margin-bottom:12px;text-shadow:0 1px 10px rgba(0,0,0,0.5);}
-.script-big{font-family:'Passions Conflict',cursive;font-size:clamp(72px,12vw,130px);color:#fff;line-height:0.95;text-shadow:0 4px 50px rgba(0,0,0,0.55),0 0 100px rgba(255,252,248,0.1);letter-spacing:1px;}
-.serif-sub{font-family:'Passions Conflict',cursive;font-size:clamp(32px,4.5vw,52px);color:rgba(255,255,255,0.82);font-weight:400;margin-bottom:0;line-height:1;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4.5vw,44px);font-weight:400;color:#fff;letter-spacing:2px;text-shadow:0 2px 24px rgba(0,0,0,0.5);}
-.divider{display:flex;align-items:center;gap:14px;margin:14px 0;width:100%;max-width:300px;}
+.eyebrow{font-size:clamp(9px,2.5vw,13px);letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:6px;text-shadow:0 1px 10px rgba(0,0,0,0.5);}
+.script-big{font-family:'Passions Conflict',cursive;font-size:clamp(56px,14vw,120px);color:#fff;line-height:0.92;text-shadow:0 4px 50px rgba(0,0,0,0.55),0 0 100px rgba(255,252,248,0.1);letter-spacing:1px;}
+.serif-sub{font-family:'Passions Conflict',cursive;font-size:clamp(22px,5.5vw,48px);color:rgba(255,255,255,0.82);font-weight:400;margin-bottom:0;line-height:1;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(20px,5vw,44px);font-weight:400;color:#fff;letter-spacing:2px;text-shadow:0 2px 24px rgba(0,0,0,0.5);margin-bottom:2px;}
+.divider{display:flex;align-items:center;gap:10px;margin:8px 0;width:100%;max-width:260px;}
 .div-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
 .div-gem{font-size:12px;color:rgba(255,255,255,0.7);letter-spacing:4px;}
 
-.pill{background:rgba(255,252,248,0.09);backdrop-filter:blur(22px);border:1px solid rgba(255,252,248,0.18);border-radius:100px;padding:16px 40px;font-size:clamp(14px,2.2vw,17px);font-weight:300;color:#fff;line-height:1.8;box-shadow:0 8px 34px rgba(0,0,0,0.28),inset 0 1px 0 rgba(255,255,255,0.1);transition:transform 0.3s ease;margin-top:18px;}
+.pill{background:rgba(255,252,248,0.09);backdrop-filter:blur(22px);border:1px solid rgba(255,252,248,0.18);border-radius:20px;padding:12px 20px;font-size:clamp(13px,3.5vw,16px);font-weight:300;color:#fff;line-height:1.7;box-shadow:0 8px 34px rgba(0,0,0,0.28),inset 0 1px 0 rgba(255,255,255,0.1);transition:transform 0.3s ease;margin-top:12px;}
 .pill:hover{transform:translateY(-3px);}
 
 .dcard{background:rgba(255,252,248,0.09);backdrop-filter:blur(26px);border:1px solid rgba(201,169,110,0.32);border-radius:22px;padding:22px 32px;box-shadow:0 20px 60px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.07);transition:transform 0.3s ease;min-width:140px;}
@@ -141,19 +141,34 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .cards-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:20px;width:100%;}
 
 /* Date ring + wave */
-.date-ring-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;margin:16px auto;}
+.date-ring-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;margin:10px auto;}
 .wave-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(201,169,110,0.6);animation:waveExpand 2.4s ease-out infinite;pointer-events:none;}
-.wave-ring:nth-child(1){width:186px;height:186px;animation-delay:0s;}
-.wave-ring:nth-child(2){width:186px;height:186px;animation-delay:0.8s;}
-.wave-ring:nth-child(3){width:186px;height:186px;animation-delay:1.6s;}
+.wave-ring:nth-child(1){width:clamp(140px,38vw,186px);height:clamp(140px,38vw,186px);animation-delay:0s;}
+.wave-ring:nth-child(2){width:clamp(140px,38vw,186px);height:clamp(140px,38vw,186px);animation-delay:0.8s;}
+.wave-ring:nth-child(3){width:clamp(140px,38vw,186px);height:clamp(140px,38vw,186px);animation-delay:1.6s;}
 @keyframes waveExpand{0%{transform:scale(1);opacity:0.7;}100%{transform:scale(1.75);opacity:0;}}
-.date-ring{width:186px;height:186px;border-radius:50%;border:1px solid rgba(201,169,110,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:rgba(255,252,248,0.06);backdrop-filter:blur(18px);box-shadow:0 0 60px rgba(201,169,110,0.12);transition:transform 0.4s ease;z-index:2;}
+.date-ring{width:clamp(140px,38vw,186px);height:clamp(140px,38vw,186px);border-radius:50%;border:1px solid rgba(201,169,110,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:rgba(255,252,248,0.06);backdrop-filter:blur(18px);box-shadow:0 0 60px rgba(201,169,110,0.12);transition:transform 0.4s ease;z-index:2;}
 .date-ring::before{content:'';position:absolute;inset:-13px;border-radius:50%;border:1px solid rgba(201,169,110,0.11);}
 .date-ring::after{content:'';position:absolute;inset:-26px;border-radius:50%;border:1px solid rgba(201,169,110,0.05);}
 .date-ring:hover{transform:scale(1.04);}
-.dr-month{font-family:'EB Garamond',serif;font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#fff;margin-bottom:4px;font-weight:500;opacity:0.8;}
-.dr-day{font-family:'EB Garamond',serif;font-size:60px;font-weight:700;color:#fff;line-height:1;}
-.dr-year{font-family:'EB Garamond',serif;font-size:13px;letter-spacing:4px;color:rgba(255,255,255,0.6);margin-top:4px;font-weight:500;}
+.dr-month{font-family:'EB Garamond',serif;font-size:clamp(9px,2.2vw,13px);letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:2px;font-weight:500;opacity:0.8;}
+.dr-day{font-family:'EB Garamond',serif;font-size:clamp(40px,11vw,60px);font-weight:700;color:#fff;line-height:1;}
+.dr-year{font-family:'EB Garamond',serif;font-size:clamp(9px,2.2vw,13px);letter-spacing:4px;color:rgba(255,255,255,0.6);margin-top:2px;font-weight:500;}
+
+
+/* Horizontal info row — Day / Time inline */
+.info-row{display:flex;align-items:stretch;gap:0;width:100%;max-width:340px;margin-top:10px;background:rgba(255,252,248,0.07);backdrop-filter:blur(22px);border:1px solid rgba(201,169,110,0.28);border-radius:18px;overflow:hidden;}
+.info-cell{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 10px;text-align:center;}
+.info-cell:not(:last-child){border-right:1px solid rgba(201,169,110,0.2);}
+.info-cell .lbl{font-family:'EB Garamond',serif;font-size:clamp(8px,2vw,11px);letter-spacing:4px;text-transform:uppercase;color:#fff;opacity:0.6;margin-bottom:5px;font-weight:500;}
+.info-cell .val{font-family:'EB Garamond',serif;font-size:clamp(14px,4vw,22px);color:#fff;font-weight:600;line-height:1.1;}
+.info-cell .hint{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.55);margin-top:3px;}
+
+/* Venue pill */
+.venue-pill{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:340px;margin-top:8px;margin-bottom:16px;background:rgba(255,252,248,0.07);backdrop-filter:blur(22px);border:1px solid rgba(201,169,110,0.28);border-radius:18px;padding:12px 20px;text-align:center;}
+.venue-pill .lbl{font-family:'EB Garamond',serif;font-size:clamp(8px,2vw,11px);letter-spacing:4px;text-transform:uppercase;color:#fff;opacity:0.6;margin-bottom:5px;font-weight:500;}
+.venue-pill .val{font-family:'EB Garamond',serif;font-size:clamp(15px,4.5vw,24px);color:#fff;font-weight:600;}
+.venue-pill .hint{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.55);margin-top:3px;}
 
 /* Monogram */
 .monogram{width:96px;height:96px;border-radius:50%;border:1px solid rgba(201,169,110,0.32);display:flex;align-items:center;justify-content:center;font-family:'Great Vibes',cursive;font-size:34px;color:#fff;background:rgba(255,255,255,0.06);backdrop-filter:blur(12px);margin-bottom:4px;position:relative;box-shadow:0 0 40px rgba(201,169,110,0.1);}
@@ -166,8 +181,8 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 .badge{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.35);border-radius:100px;padding:10px 30px;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#fff;background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);margin-top:18px;}
 
 /* ═══ Engagement Ring Shine ═══ */
-.ring-wrap{position:relative;display:inline-block;margin-bottom:10px;}
-.ring-emoji{font-size:72px;display:block;animation:ringSpin 6s ease-in-out infinite,ringGlow 2.5s ease-in-out infinite;}
+.ring-wrap{position:relative;display:inline-block;margin-bottom:6px;}
+.ring-emoji{font-size:clamp(44px,10vw,64px);display:block;animation:ringSpin 6s ease-in-out infinite,ringGlow 2.5s ease-in-out infinite;}
 @keyframes ringSpin{0%,100%{transform:rotate(-8deg) scale(1);}30%{transform:rotate(8deg) scale(1.12);}60%{transform:rotate(-4deg) scale(1.06);}}
 @keyframes ringGlow{0%,100%{filter:drop-shadow(0 0 12px rgba(255,215,0,0.7)) drop-shadow(0 0 28px rgba(255,215,0,0.35));}50%{filter:drop-shadow(0 0 30px rgba(255,215,0,1)) drop-shadow(0 0 55px rgba(255,215,0,0.7)) drop-shadow(0 0 80px rgba(255,200,0,0.4));}}
 .ring-sparkle{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;pointer-events:none;animation:sparkleFlash ease-in-out infinite;}
@@ -178,8 +193,8 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 @keyframes sparkleFlash{0%,100%{opacity:0;transform:scale(0.3);}40%,60%{opacity:1;transform:scale(1);}}
 
 /* ═══ Christian Thali ═══ */
-.thali-wrap{position:relative;display:inline-block;margin-bottom:10px;}
-.thali-svg{width:70px;height:95px;animation:thaliGlow 2.8s ease-in-out infinite,thaliFloat 4s ease-in-out infinite;}
+.thali-wrap{position:relative;display:inline-block;margin-bottom:6px;}
+.thali-svg{width:clamp(44px,10vw,62px);height:clamp(60px,13vw,84px);animation:thaliGlow 2.8s ease-in-out infinite,thaliFloat 4s ease-in-out infinite;}
 @keyframes thaliGlow{0%,100%{filter:drop-shadow(0 0 10px rgba(255,220,120,0.7)) drop-shadow(0 0 22px rgba(255,200,80,0.35));}50%{filter:drop-shadow(0 0 28px rgba(255,220,120,1)) drop-shadow(0 0 50px rgba(255,200,80,0.7)) drop-shadow(0 0 75px rgba(255,180,60,0.4));}}
 @keyframes thaliFloat{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-6px) rotate(3deg);}}
 .thali-sparkle{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffe87a;pointer-events:none;animation:sparkleFlash ease-in-out infinite;}
@@ -190,11 +205,11 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
 
 /* ═══ Map button ═══ */
 .map-btn{display:inline-flex;align-items:center;gap:0;margin-top:0;position:relative;background:transparent;border:none;padding:0;text-decoration:none;cursor:pointer;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);}
-.map-btn-inner{display:inline-flex;align-items:center;gap:14px;background:rgba(0,0,0,0.45);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:15px 28px 15px 16px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 10px 40px rgba(0,0,0,0.55);}
+.map-btn-inner{display:inline-flex;align-items:center;gap:12px;background:rgba(0,0,0,0.45);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:12px 22px 12px 12px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:0 10px 40px rgba(0,0,0,0.55);}
 .map-btn:hover .map-btn-inner{background:rgba(0,0,0,0.65);border-color:rgba(255,255,255,0.28);box-shadow:0 18px 55px rgba(0,0,0,0.65);transform:translateY(-4px);}
-.map-icon-wrap{width:36px;height:36px;border-radius:100px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.4s ease;}
+.map-icon-wrap{width:32px;height:32px;border-radius:100px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.4s ease;}
 .map-btn:hover .map-icon-wrap{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.35);}
-.map-btn-label{font-family:'EB Garamond',serif;font-size:15px;letter-spacing:4px;text-transform:uppercase;color:#fff;font-weight:600;line-height:1;transition:letter-spacing 0.3s ease;}
+.map-btn-label{font-family:'EB Garamond',serif;font-size:clamp(12px,3.5vw,15px);letter-spacing:3px;text-transform:uppercase;color:#fff;font-weight:600;line-height:1;transition:letter-spacing 0.3s ease;}
 .map-btn:hover .map-btn-label{letter-spacing:5px;}
 .map-btn-arrow{font-size:20px;color:rgba(255,255,255,0.4);transition:all 0.35s ease;margin-left:6px;line-height:1;}
 .map-btn:hover .map-btn-arrow{color:rgba(255,255,255,0.9);transform:translateX(5px);}
@@ -252,7 +267,7 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
     <div class="mist-bot"></div><div class="heaven"></div><div class="sparkles"></div><div class="particles"></div>
-    <div class="content" style="justify-content:center;padding-top:40px;">
+    <div class="content">
       <div class="script-big reveal d1">Finhas</div>
       <div class="serif-sub reveal d2">and the love of his life</div>
       <div class="script-big reveal d3">Anjitha</div>
@@ -284,13 +299,21 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
           <div class="dr-year">2026</div>
         </div>
       </div>
-      <div class="cards-row">
-        <div class="dcard reveal-left d5"><div class="lbl">Day</div><div class="val">Saturday</div><div class="hint">A beautiful beginning</div></div>
-        <div class="dcard reveal-right d5"><div class="lbl">Time</div><div class="val">11 AM – 2 PM</div><div class="hint">Celebrations all afternoon</div></div>
+      <div class="info-row reveal d5">
+        <div class="info-cell">
+          <div class="lbl">Day</div>
+          <div class="val">Saturday</div>
+          <div class="hint">April 11</div>
+        </div>
+        <div class="info-cell">
+          <div class="lbl">Time</div>
+          <div class="val">11 AM – 2 PM</div>
+          <div class="hint">All afternoon</div>
+        </div>
       </div>
-      <div class="dcard reveal-blur d6" style="margin-top:14px;margin-bottom:24px;width:100%;max-width:340px;text-align:center;">
+      <div class="venue-pill reveal-blur d6">
         <div class="lbl">Venue</div>
-        <div class="val" style="font-size:clamp(17px,3vw,24px);">ABC Hall</div>
+        <div class="val">ABC Hall</div>
         <div class="hint">Muvattupuzha, Kerala</div>
       </div>
       <a class="map-btn reveal-scale d7" href="https://maps.google.com/?q=ABC+Hall+Muvattupuzha+Kerala" target="_blank" rel="noopener">
@@ -346,13 +369,21 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
           <div class="dr-year">2026</div>
         </div>
       </div>
-      <div class="cards-row">
-        <div class="dcard reveal-left d5"><div class="lbl">Day</div><div class="val">Sunday</div><div class="hint">A day to remember</div></div>
-        <div class="dcard reveal-right d5"><div class="lbl">Time</div><div class="val">12:00 PM</div><div class="hint">Doors open at 11:30</div></div>
+      <div class="info-row reveal d5">
+        <div class="info-cell">
+          <div class="lbl">Day</div>
+          <div class="val">Sunday</div>
+          <div class="hint">April 19</div>
+        </div>
+        <div class="info-cell">
+          <div class="lbl">Time</div>
+          <div class="val">12:00 PM</div>
+          <div class="hint">Doors open 11:30</div>
+        </div>
       </div>
-      <div class="dcard reveal-blur d6" style="margin-top:14px;margin-bottom:24px;width:100%;max-width:340px;text-align:center;">
+      <div class="venue-pill reveal-blur d6">
         <div class="lbl">Venue</div>
-        <div class="val" style="font-size:clamp(16px,3vw,23px);">St Mary's Church</div>
+        <div class="val">St Mary's Church</div>
         <div class="hint">Dubai, United Arab Emirates</div>
       </div>
       <a class="map-btn reveal-scale d7" href="https://maps.google.com/?q=St+Mary+Catholic+Church+Dubai" target="_blank" rel="noopener">
@@ -372,7 +403,7 @@ body { font-family:'Cormorant Garamond',serif; background:var(--dark); color:var
     <div class="clouds-wrap"><div class="c c1"></div><div class="c c2"></div><div class="c c3"></div><div class="c c4"></div><div class="c c5"></div><div class="c c6"></div></div>
     <div class="wisps"><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div><div class="wisp"></div></div>
     <div class="mist-bot"></div><div class="heaven"></div><div class="sparkles"></div><div class="particles"></div>
-    <div class="content" style="justify-content:center;padding-top:60px;">
+    <div class="content">
       <div class="monogram reveal-scale d1">F&A</div>
       <div class="eyebrow reveal d2" style="margin-top:14px;">Join us at</div>
       <div class="section-title reveal d3">St Mary's Church</div>
@@ -406,7 +437,7 @@ function spawnRipple(x,y){const r=document.createElement('div');r.className='rip
 function openInvite(e){playHeartSound();const icon=document.getElementById('heartIcon');icon.classList.add('pop');setTimeout(()=>icon.classList.remove('pop'),400);const t=(e.touches&&e.touches[0])?e.touches[0]:e;spawnRipple(t.clientX||innerWidth/2,t.clientY||innerHeight/2);setTimeout(()=>{const intro=document.getElementById('intro');intro.classList.add('hide');setTimeout(()=>{intro.style.display='none';document.getElementById('main').style.display='block';initAll();setTimeout(startMusic,700);},1900);},320);}
 function initAll(){generateSparkles();generateHearts();setupScrollReveal();setupParallax();setupNavDots();setupArrow();setTimeout(()=>{document.querySelectorAll('#s0 .reveal,#s0 .reveal-scale,#s0 .reveal-blur').forEach(el=>el.classList.add('v'));},100);}
 function setupScrollReveal(){const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.reveal-blur').forEach(el=>obs.observe(el));}
-function setupParallax(){window.addEventListener('scroll',()=>{const y=scrollY;document.querySelectorAll('.bg-img').forEach(img=>{img.style.transform=`translateY(${y*0.06}px)`;});},{passive:true});}
+function setupParallax(){ /* disabled — snap scroll sections don't need parallax */ }
 function setupNavDots(){const sections=['s0','s1','s2','s3'].map(id=>document.getElementById(id));const dots=document.querySelectorAll('.nav-dot');const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const i=sections.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('active',i===j));}});},{threshold:0.5});sections.forEach(s=>{if(s)obs.observe(s);});}
 function goTo(i){document.getElementById(['s0','s1','s2','s3'][i]).scrollIntoView({behavior:'smooth'});}
 function scrollDown(){window.scrollBy({top:innerHeight,behavior:'smooth'});}
